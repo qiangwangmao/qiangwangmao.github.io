@@ -4,12 +4,11 @@
     padding: 0;
     margin: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    overflow: hidden;
 }
 
 body {
     background-image: url(https://w.wallhaven.cc/full/4x/wallhaven-4x8kdd.jpg);
-    backdrop-filter: blur(2.5px) grayscale(30%);
+    backdrop-filter: blur(2.5px) grayscale(70%) brightness(115%) contrast(80%);
     display: flex;
     height: 100vh;
     object-fit: scale-down;
@@ -20,31 +19,129 @@ body {
 .main {
     margin: auto;
     height: 850px;
-    width: 700px;
-    background-image: url(https://w.wallhaven.cc/full/n6/wallhaven-n6wjo6.jpg);
+    width: 800px;
+    background-image: url(https://w.wallhaven.cc/full/5d/wallhaven-5dq2z9.jpg);
     background-size: cover;
     background-position: center;
     border: solid;
     border-width: 1.2px;
-    border-color: rgb(255, 223, 188);
-    box-shadow: 6px 9px 15px rgba(0, 0, 0, 0.40);
+    border-color: rgb(159, 181, 146);
+    box-shadow: 6px 9px 15px rgba(0, 0, 0, 0.40), inset 7px 7px 8px rgba(20, 52, 27, 0.20);
+    border-radius: 8px;
 }
 
-.main h1 {
+.title {
+    height: 80px;
+    text-decoration: none;
+}
+.title h1 {
     margin: auto;
     text-align: center;
     padding: 2%;
     transform: skew(-8deg);
-    font-size: 40px;
-    letter-spacing: 2px;
-    color: #FFFEF9;
-    text-shadow: 3px 3px 5px rgba(76, 47, 21, 0.3), -3px -2px 3px rgb(255, 176, 91, 0.20)
+    color: #DDE1EA;
+    text-shadow: 3px 3px 5px rgba(78, 78, 78, 0.3), -3px -2px 3px rgba(255, 255, 255, 0.2);
+    animation: float 1.6s ease-in-out infinite alternate;
+    text-decoration: none;
+}
+
+.title a {
+    text-decoration: none;
+    color: #DDE1EA;
 }
 
 .main h5 {
     margin: auto;
     text-align: center;
     padding: 1%;
-    color: rgba(94, 51, 22, 0.05);
-    text-shadow: 0.5px 0.5px 2px rgba(76, 47, 21, 0.1), -3px -2px 3px rgba(255, 255, 255, 0.2)
+    color: #DDE1EA;
+    text-shadow: 3px 3px 5px rgba(78, 78, 78, 0.3), -3px -2px 3px rgba(255, 255, 255, 0.2)
+}
+
+.sidebar {
+    background: rgb(91,91,91);
+    background: linear-gradient(180deg, rgba(91,91,91,1) 0%, rgba(80,80,80,1) 38%, rgba(65,65,65,1) 55%, rgba(56,56,56,1) 100%);
+    width: 170px;
+    height: 650px;
+    margin-top: 30px;
+    border-radius: 0px 10px 10px 0px;
+    border: solid;
+    border-width: 1px;
+    border-color: rgb(59, 59, 59);
+    box-shadow: inset -12px -12px 24px rgba(0, 0, 0, 0.15), 10px 7px 8px rgba(0, 0, 0, 0.3);
+    overflow: visible;
+    float: left;
+}
+
+.welcome {
+    text-align: center;
+    padding: 15px 0;
+    letter-spacing: 1.5px;
+    transform: skew(-5deg);
+    animation: title_flicker 0.02s linear infinite;
+}
+
+.sidebar-elements {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 170px 0;
+    gap: 30px;
+}
+
+.sidebar-elements a {
+    color: rgb(127, 127, 127);
+    text-decoration: none;
+    transition: color 0.05s;
+}
+
+.sidebar-elements a.active {
+    animation: active_flicker 0.12s linear infinite;
+}
+
+.sidebar-elements a:visited {
+    color: rgb(127, 127, 127);
+}
+
+.sidebar-elements a:hover {
+    color: white;
+    text-shadow: 0px 0.15px 5px white;
+}
+
+@keyframes title_flicker {
+    0%{
+        color: white;
+        text-shadow: 0px 0px 10px white;
+    }
+    100%{
+        color: rgb(224, 224, 224);
+        text-shadow: 0px 0px 10px rgba(200, 200, 200, 0.614);
+    }
+}
+
+@keyframes active_flicker {
+    0%{
+        color: white;
+        text-shadow: 0px 0.15px 3px white;
+    }
+    100%{
+        color: rgb(218, 218, 218);
+        text-shadow: 0px 0.15px 3px rgb(220, 220, 220);
+    }
+}
+
+@keyframes float {
+    0%{
+        font-size: 33px;
+        letter-spacing: 6px;
+    }
+    100%{
+        font-size: 44px;
+        letter-spacing: 2px;
+    }
+}
+
+.text {
+    background-color: red;
+    width: 200px;
 }
