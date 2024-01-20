@@ -7,8 +7,8 @@
 }
 
 body {
-    background-image: url(https://w.wallhaven.cc/full/4x/wallhaven-4x8kdd.jpg);
-    backdrop-filter: blur(2.5px) grayscale(70%) brightness(115%) contrast(80%);
+    background-image: url(/qiangwangmao.github.io/assets/img/wallhaven-pk9kd3.gif);
+    backdrop-filter: blur(5px) grayscale(30%) brightness(90%) contrast(90%);
     display: flex;
     height: 100vh;
     object-fit: scale-down;
@@ -20,13 +20,13 @@ body {
     margin: auto;
     height: 850px;
     width: 800px;
-    background-image: url(https://w.wallhaven.cc/full/5d/wallhaven-5dq2z9.jpg);
+    background-image: url(/qiangwangmao.github.io/assets/img/wallhaven-5dq2z9.jpg);
     background-size: cover;
     background-position: center;
     border: solid;
     border-width: 1.2px;
     border-color: rgb(159, 181, 146);
-    box-shadow: 6px 9px 15px rgba(0, 0, 0, 0.40), inset 7px 7px 8px rgba(20, 52, 27, 0.20);
+    box-shadow: 16px 19px 30px rgba(0, 0, 0, 0.6), inset 7px 7px 8px rgba(20, 52, 27, 0.20);
     border-radius: 8px;
 }
 
@@ -41,7 +41,7 @@ body {
     font-style: italic;
     color: #DDE1EA;
     text-shadow: 3px 3px 5px rgba(78, 78, 78, 0.3), -3px -2px 3px rgba(255, 255, 255, 0.2);
-    animation: float 1.6s ease-in-out infinite alternate;
+    animation: spcng 3s ease-in-out infinite alternate;
     text-decoration: none;
     font-size: 40px;
 }
@@ -56,7 +56,7 @@ body {
     text-align: center;
     padding: 1%;
     color: #DDE1EA;
-    text-shadow: 3px 3px 5px rgba(78, 78, 78, 0.3), -3px -2px 3px rgba(255, 255, 255, 0.2)
+    text-shadow: 3px 3px 5px rgba(78, 78, 78, 0.3), -3px -2px 3px rgba(255, 255, 255, 0.2);
 }
 
 .sidebar {
@@ -78,7 +78,7 @@ body {
     text-align: center;
     padding: 15px 0;
     letter-spacing: 1.5px;
-    transform: skew(-5deg);
+    font-style: italic;
     animation: title_flicker 0.02s linear infinite;
 }
 
@@ -131,13 +131,11 @@ body {
     }
 }
 
-@keyframes float {
+@keyframes spcng {
     0%{
-        transform: scale(0.6, 1.68);
         letter-spacing: 0px;
     }
     100%{
-        transform: scale(1.35, 0.95);
         letter-spacing: 4px;
     }
 }
@@ -145,4 +143,62 @@ body {
 .text {
     background-color: red;
     width: 200px;
+}
+
+.contents {
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    width: 550px;
+    height: 650px;
+    margin-left: 26%;
+    margin-top: 3%;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(219, 255, 210, 0.108) rgba(0, 0, 0, 0);
+}
+
+.contents p {
+    color: rgb(235, 235, 235);
+    padding: 3%;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    font-size: 12px;
+    letter-spacing: 1.3px;
+
+}
+
+@media screen and (max-width: 600px)
+{
+    .main {
+    margin: auto;
+    height: 100vh;
+    width: 100vw;
+    }
+    .title h1 {
+        font-size: 30px;
+    }
+    @keyframes spcng {
+        0% {
+            letter-spacing: 0px;
+        }
+        100% {
+            letter-spacing: 3px;
+        }
+    }
+    .sidebar {
+        display: none;
+    }
+
+    .contents {
+        width: 300px;
+        height: 700px;
+        margin: auto;
+        transform: translateY(40px);
+        overflow: scroll;
+    }
+    
+    .contents p {
+        padding: 5%;
+        font-size: 15px;
+    }
 }
