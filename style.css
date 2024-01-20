@@ -154,8 +154,12 @@ body {
     margin-left: 26%;
     margin-top: 3%;
     overflow-y: scroll;
-    scrollbar-width: thin;
-    scrollbar-color: rgba(219, 255, 210, 0.108) rgba(0, 0, 0, 0);
+    scrollbar-width: thin; /* gecko scrollbar */
+    scrollbar-color: rgba(219, 255, 210, 0.108) rgba(0, 0, 0, 0); /* gecko scrollbar */
+}
+
+::-webkit-scrollbar {
+    width: 10px; /* scrollbar goes invisible doesnt matter the value ok then */
 }
 
 .contents p {
@@ -164,7 +168,11 @@ body {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
     font-size: 12px;
     letter-spacing: 1.3px;
+    text-decoration: none;
+}
 
+.contents a:link {
+    text-decoration: none;
 }
 
 @media screen and (max-width: 600px)
